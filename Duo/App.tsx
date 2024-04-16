@@ -1,41 +1,48 @@
-import React, {useState} from 'react';
-import {Text, TextInput, View, StyleSheet, ScrollView, Image} from 'react-native';
+import React, { useEffect } from 'react';
+import { StyleSheet, StatusBar, View, Dimensions } from 'react-native';
+import { Video } from 'expo-av';
+import * as ScreenOrientation from 'expo-screen-orientation';
 
-const PizzaTranslator = () => {
+const VideoPlayer = () => {
+  useEffect(() => {
+    async function setOrientation() {
+      await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
+    }
+
+    setOrientation();
+
+    return () => {
+      ScreenOrientation.unlockAsync();
+    };
+  }, []);
+
   return (
-    
-    <ScrollView contentContainerStyle={styles.scrollView}>
-      <View style={styles.container}>
-        <Image
-          style={{width: 50, height: 50, marginTop:10}}
-          source={{uri: 'assets/fleche-longue.png'}}
-        />
-        <View style={styles.card}></View>
-        <View style={styles.card}></View>
-        <View style={styles.card}></View>
-        <View style={styles.card}></View>
-        <View style={styles.card}></View>
-      </View>
-    </ScrollView>
+    <View style={styles.container}>
+      <StatusBar hidden={true} />
+      <Video
+        source={require('./img/Super Mario Maker 2 Online .mp4')}
+        rate={1.0}
+        volume={1.0}
+        isMuted={false}
+        resizeMode="cover"
+        shouldPlay
+        style={styles.video}
+        useNativeControls={false}
+      />
+    </View>
   );
 };
 
+const { width, height } = Dimensions.get('window');
+
 const styles = StyleSheet.create({
-  scrollView: {
-    flexGrow: 1,
-  },
   container: {
     flex: 1,
-    backgroundColor: 'rgb(0, 168, 107)',
-    padding: 10,
-    alignItems: 'flex-end',
   },
-  card: {
-    marginTop: 10,
-    width: 350,
-    height: 200,
-    backgroundColor: 'rgb(0, 0, 0)',
+  video: {
+    width: height,  // Échange de la largeur et de la hauteur pour le mode paysage
+    height: width,
   },
 });
 
-export default PizzaTranslator;
+export default VideoPlayer;
