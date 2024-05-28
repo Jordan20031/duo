@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+</head>
+<body>
+    <div id="loginContainer">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Nom d'utilisateur" required><br>
+        <input type="password" id="loginPassword" placeholder="Mot de passe" required><br>
+        <button onclick="login()">Se connecter</button>
+    </div>
+    <hr>
+    <div id="registerContainer">
+        <h2>Register</h2>
+        <input type="text" id="registerUsername" placeholder="Nom d'utilisateur" required><br>
+        <input type="password" id="registerPassword" placeholder="Mot de passe" required><br>
+        <button onclick="register()">S'inscrire</button>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+            const data = { username, password };
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+         
+                window.location.href = '../qr-connect/index.html'; // Redirection après connexion réussie
+            })
+            .catch(error => alert(error.message));
+        }
+
+        function register() {
+            const username = document.getElementById('registerUsername').value;
+            const password = document.getElementById('registerPassword').value;
+            const data = { username, password };
+
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur lors de l\'enregistrement de l\'utilisateur.');
+                }
+                alert('Utilisateur enregistré avec succès.');
+            })
+            .catch(error => alert(error.message));
+        }
+    </script>
+</body>
+</html>
