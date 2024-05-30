@@ -1,6 +1,6 @@
 # Projet DUO game - Guide d'Installation et d'Utilisation
 
-![Bannière du Projet](https://th.bing.com/th/id/OIP.yrBQp7MAFwMmCZaryi98awAAAA?w=241&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7)
+![Bannière du Projet](https://psy-voyance.com/wp-content/uploads/2014/06/splash.jpg)
 
 Bienvenue dans ce guide détaillé pour installer et utiliser notre DUO. Suivez ces instructions pour configurer l'environnement sur votre PC et votre téléphone.
 
