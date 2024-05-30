@@ -1,6 +1,6 @@
-# Projet QR Code - Guide d'Installation et d'Utilisation
+# Projet DUO game - Guide d'Installation et d'Utilisation
 
-Bienvenue dans ce guide détaillé pour installer et utiliser notre projet de génération et de lecture de QR codes. Suivez ces instructions pour configurer l'environnement sur votre PC et votre téléphone.
+Bienvenue dans ce guide détaillé pour installer et utiliser notre DUO. Suivez ces instructions pour configurer l'environnement sur votre PC et votre téléphone.
 
 ## Prérequis
 
