@@ -1,2 +1,4 @@
 -Faire un readme
--Faire une présentation
+-Faire une présntation
+-(voir avec théo comment faire pour changer bg avec qr code)
+-Faire une page qui permet de mettre une note et des commentaires qui après m'envoie directement un mail avec tout le contenu

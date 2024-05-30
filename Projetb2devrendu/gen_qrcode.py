@@ -5,4 +5,4 @@ qr.add_data(' https://c24c-85-169-101-162.ngrok-free.app/DUO')
 qr.make(fit=True)
 
 img = qr.make_image(fill_color="black", back_color="white")
-img.save("images/qrcode.png")
+img.save("screen/qr-connect/qrcode.png")
