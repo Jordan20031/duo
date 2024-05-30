@@ -1,5 +1,7 @@
 # Projet DUO game - Guide d'Installation et d'Utilisation
 
+![Bannière du Projet](https://www.bing.com/ck/a?!&&p=7d5a4cee6a422a24JmltdHM9MTcxNzAyNzIwMCZpZ3VpZD0yNjA2ZDM3OS02ODUzLTY1NDUtM2Y2OC1jMTE0NjkzODY0MTUmaW5zaWQ9NjcwNg&ptn=3&ver=2&hsh=3&fclid=2606d379-6853-6545-3f68-c11469386415&u=a1L2ltYWdlcy9zZWFyY2g_cT1vaXNlYXUmY2JuPUtub3dsZWRnZUNhcmQmc3RpZD1jMzY3NGEzOS1mNmU4LThlYjEtMGZiNi0yYWU4MDlmZjRjOTImRk9STT1LQ0hJTU0&ntb=1)
+
 Bienvenue dans ce guide détaillé pour installer et utiliser notre DUO. Suivez ces instructions pour configurer l'environnement sur votre PC et votre téléphone.
 
 ## Prérequis
