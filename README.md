@@ -85,7 +85,7 @@ Expo Go est une application qui permet de lancer des projets Expo sur votre tél
 Dans le terminal de votre PC, accédez au répertoire de votre projet mobile, puis :
 
 ```bash
-cd mobile_app
+cd Projetb2devrendu\mobile_app\app\duo_game-mobile\Duo
 npx expo start
 ```
 

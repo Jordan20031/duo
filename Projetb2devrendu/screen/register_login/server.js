@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 80;
 
 // Exemple de données utilisateurs, à remplacer par une base de données
 const users = [
